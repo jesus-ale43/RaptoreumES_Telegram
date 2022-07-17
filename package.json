@@ -1,15 +1,15 @@
 {
   "name": "raptoreumes_telegram",
+  "packageManager": "yarn@3.2.1",
   "version": "0.0.1",
   "description": "A telegram bot used for the Spanish Raptoreum group.",
   "main": "src/index.js",
   "author": "Jesus-ale43",
-  "license": "MIT",
+  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Hyduez/MiniFumo"
+    "url": "https://github.com/jesus-ale43/RaptoreumES_Telegram.git"
   },
-  "private": false,
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
@@ -21,5 +21,10 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/jesus-ale43/RaptoreumES_Telegram/issues"
+  },
+  "homepage": "https://github.com/jesus-ale43/RaptoreumES_Telegram#readme",
+  "keywords": []
 }
