@@ -48,3 +48,5 @@ for (const file of Events) {
         }
     })
 }
+
+client.start();
