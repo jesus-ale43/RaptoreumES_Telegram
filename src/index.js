@@ -18,18 +18,33 @@ const client = new TeleBot({
 
 
 const Interactions = readdirSync(path.join(__dirname, 'Interactions'));
+
 for (const folders of Interactions) {
     const folder = readdirSync(path.join(__dirname, 'Interactions', folders))
     for (const file of folder) {
-        const cmd = require(path.join(__dirname, 'Interactions', folders, file))
+        const interaction = require(path.join(__dirname, 'Interactions', folders, file))
         console.log(`[Interactions]: ${file} has loaded successfully.`)
-        client.on(cmd.name, async (...args) => {
+        client.on(interaction.name, async (...args) => {
             try {
-                await cmd.run(client, ...args)
+                await interaction.run(client, ...args)
             } catch (error) {
                 console.log(error)
             }
-        }
-        )
+        })
     }
+}
+
+
+const Events = readdirSync(path.join(__dirname, 'Events'));
+
+for (const file of Events) {
+    const event = require(path.join(__dirname, 'Events', file))
+    console.log(`[Events]: ${file} has loaded successfully.`)
+    client.on(event.name, async (...args) => {
+        try {
+            await event.run(client, ...args)
+        } catch (error) {
+            console.log(error)
+        }
+    })
 }
