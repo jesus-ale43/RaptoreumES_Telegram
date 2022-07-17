@@ -4,6 +4,7 @@
   "description": "A telegram bot used for the Spanish Raptoreum group.",
   "main": "src/index.js",
   "dependencies": {
+    "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "fs": "^0.0.1-security",
     "telebot": "^1.4.1"
@@ -12,7 +13,8 @@
     "nodemon": "^2.0.19"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",

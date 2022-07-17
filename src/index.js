@@ -40,6 +40,11 @@ const Events = readdirSync(path.join(__dirname, 'Events'));
 for (const file of Events) {
     const event = require(path.join(__dirname, 'Events', file))
     console.log(`[Events]: ${file} has loaded successfully.`)
+
+
+    //;-;
+
+
     client.on(event.name, async (...args) => {
         try {
             await event.run(client, ...args)
@@ -48,5 +53,6 @@ for (const file of Events) {
         }
     })
 }
+
 
 client.start();

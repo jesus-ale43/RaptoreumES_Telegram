@@ -1,6 +1,6 @@
 module.exports = {
     name: "newChatMembers",
     run: async (client, msg) => {
-        await msg.reply.text("Hola.")
+        console.log(`Se ha unido alguien. ${msg.new_chat_members.first_name}`)
     }
 }
