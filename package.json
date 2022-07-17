@@ -1,19 +1,8 @@
 {
-  "name": "raptoreumes_telegram",
-  "packageManager": "yarn@3.2.1",
+  "name": "raptoreum-telegram-bot",
   "version": "0.0.1",
   "description": "A telegram bot used for the Spanish Raptoreum group.",
   "main": "src/index.js",
-  "author": "Jesus-ale43",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jesus-ale43/RaptoreumES_Telegram.git"
-  },
-  "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
-  },
   "dependencies": {
     "dotenv": "^16.0.1",
     "fs": "^0.0.1-security",
@@ -22,9 +11,10 @@
   "devDependencies": {
     "nodemon": "^2.0.19"
   },
-  "bugs": {
-    "url": "https://github.com/jesus-ale43/RaptoreumES_Telegram/issues"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/jesus-ale43/RaptoreumES_Telegram#readme",
-  "keywords": []
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
