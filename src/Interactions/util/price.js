@@ -10,14 +10,14 @@ module.exports = {
             const { usd, sats, eth } = data.market_data.current_price;
             
             await msg.reply.text(
-                `Raptoreum - (RTM) 🦅\n\n\`USD:\`$ ${usd}\n\`BTC:\` ฿ ${sats}\n\`ETH:\` ♢ ${eth}\n\nEn unos segundos verás una captura de la gráfica...`,
+                `Raptoreum - (RTM) 🦅\n\n\`USD:\` $ ${usd}\n\`BTC:\` ฿ ${sats}\n\`ETH:\` ♢ ${eth}\n\nEn unos segundos verás una captura de la gráfica...`,
                 {
                     parseMode: 'Markdown'
                 }
             ).then(async (message) => {
             setTimeout( async () => {
-                await client.deleteMessage(msg.chat.id, message.message_id)
-                await client.deleteMessage(msg.chat.id, msg.message_id)
+                await client.deleteMessage(msg.chat.id, message.message_id).catch((err) => {console.log(err)})
+                await client.deleteMessage(msg.chat.id, msg.message_id).catch((err) => {console.log(err)})
                 }, 300000)
             })
             
@@ -25,8 +25,8 @@ module.exports = {
 
             msg.reply.photo(response.data).then(async (message) => {
                 setTimeout( async () => {
-                    await client.deleteMessage(msg.chat.id, message.message_id)
-                    await client.deleteMessage(msg.chat.id, msg.message_id)
+                    await client.deleteMessage(msg.chat.id, message.message_id).catch((err) => {console.log(err)})
+                    await client.deleteMessage(msg.chat.id, msg.message_id).catch((err) => {console.log(err)})
                 }, 300000)
             })
 
