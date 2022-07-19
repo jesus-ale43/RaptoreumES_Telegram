@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "dependencies": {
     "axios": "^0.27.2",
+    "canvas": "^2.9.3",
     "dotenv": "^16.0.1",
     "fs": "^0.0.1-security",
     "telebot": "^1.4.1"
